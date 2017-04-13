@@ -15,7 +15,7 @@ RSpec.describe "Login", type: :routing do
     end
 
     it "routes to root" do
-      expect(get: "/").to route_to("users#new")
+      expect(get: "/").to route_to("home#index")
     end
 
   end

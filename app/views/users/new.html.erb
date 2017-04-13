@@ -6,6 +6,7 @@
     <div class="col-md-4 col-md-offset-4">
 
       <% if @user.errors.any? %>
+        <h3>Formulário está inválido</h3>
         <% for message in @user.errors.full_messages %>
           <%= content_tag :div, message, class: "alert alert-warning" %>
         <% end %>
@@ -33,7 +34,7 @@
           <% end %>
 
 
-          <p class="button"> <%= submit_tag "Login", class: "btn btn-lg btn-success btn-block" %> </p>
+          <p class="button"> <%= submit_tag "Sign up", class: "btn btn-lg btn-success btn-block" %> </p>
 
           <% end %>
 

@@ -17,9 +17,9 @@ RSpec.describe "Login" do
 
     def sign_up_with(email, password)
       visit sign_up_path
-      fill_in 'Email', with: email
-      fill_in 'Password', with: password
-      fill_in 'Password confirmation', with: password
+      fill_in 'user_email', with: email
+      fill_in 'user_password', with: password
+      fill_in 'user_password_confirmation', with: password
       click_button 'Sign up'
     end
   end
@@ -34,9 +34,9 @@ RSpec.describe "Login" do
 
     def log_in_with(email, password)
       visit log_in_path
-      fill_in 'Email', with: email
-      fill_in 'Password', with: password
-      click_button "Log in"
+      fill_in 'email', with: email
+      fill_in 'password', with: password
+      click_button "Login"
     end
   end
 

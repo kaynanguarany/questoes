@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :questions
 
-  root to: "sessions#new"
+  root to: "home#index"
   get "log_in", to: "sessions#new", as: "log_in"
   get "log_out", to: "sessions#destroy", as: "log_out"
   get "sign_up", to: "users#new", as: "sign_up"
